@@ -17,44 +17,64 @@ yarn add vue-segmented
 ```
 ## Usage
 
-```javascript
+```vue
 
 
-import VueSegmented from "vue-segmented";
-import "vue-segmented/dist/index.esm.css";
+<template>
+  <div id="app">
+    <Segmented :options="options" />
+  </div>
+</template>
 
-const list: string[] = [
-  "谁念西风独自凉",
-  "萧萧黄叶闭疏窗",
-  "沉思往事立残阳",
-  "被酒莫惊春睡重",
-  "赌书消得泼茶香",
-  "当时只道是寻常",
-];
-const App = () => <NoticeBar message={list} duration={10} newLine={false} />;
-render(<App />, document.getElementById("root"));
+<script>
+import Segmented from 'vue-segmented';
+
+export default {
+  name: 'App',
+  data() {
+    return {
+      options: [
+        {
+          label: '北京',
+          value: 1
+        },
+        {
+          label: '上海',
+          value: 2
+        },
+        {
+          label: '广州',
+          value: 3
+        },
+        {
+          label: '深圳',
+          value: 4
+        },
+        {
+          label: '杭州',
+          value: 5
+        }
+      ]
+    };
+  },
+  components: {
+    Segmented
+  }
+};
+</script>
+
 ```
 
 ## Props
-| props    | type     | tip                                         |
-| -------- | -------- | ------------------------------------------- |
-| message  | string[] | 数据，字符串数组                            |
-| duration | number   | 滚动完所有数据的时间，单位是秒              |
-| newLine  | boolean  | 如果文本过长是否换行，true换行，false不换行 |
+| props         | type   | tip                                     |
+| ------------- | ------ | --------------------------------------- |
+| options       | array  | 数据，一个数组                          |
+| options.label | string | 每个分段的展示名称                      |
+| options.value | any    | 每个分段的值，change事件的回调结果      |
+| @change       | 事件   | 分段改变触发的事件，参数为options.value |
 
 
 
 ## License
 MIT
 © 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
