@@ -1,19 +1,46 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Segmented :options="options" />
+    Hello
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Segmented from './index.js';
+// import Segmented from '../dist/segmented.umd';
 
 export default {
   name: 'App',
+  data() {
+    return {
+      options: [
+        {
+          label: '北京',
+          value: 1
+        },
+        {
+          label: '上海',
+          value: 2
+        },
+        {
+          label: '广州',
+          value: 3
+        },
+        {
+          label: '深圳',
+          value: 4
+        },
+        {
+          label: '杭州',
+          value: 5
+        }
+      ]
+    };
+  },
   components: {
-    HelloWorld
+    Segmented
   }
-}
+};
 </script>
 
 <style>

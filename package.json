@@ -1,10 +1,17 @@
 {
   "name": "vue-segmented",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "基于vue的分段控制组件",
+  "private": false,
+  "main": "./dist/segmented.umd.js",
+  "files": [
+    "lib",
+    "package.json"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build:com": "vue-cli-service build --target lib --name segmented --dest lib ./src/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -18,6 +25,8 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "sass": "^1.54.4",
+    "sass-loader": "^10.1.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
