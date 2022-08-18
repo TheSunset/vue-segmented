@@ -1,6 +1,7 @@
 {
   "name": "vue-segmented",
   "version": "1.0.0",
+  "homepage": "./",
   "description": "基于vue的分段控制组件",
   "private": false,
   "main": "./dist/segmented.umd.js",
@@ -12,7 +13,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "build:com": "vue-cli-service build --target lib --name segmented --dest lib ./src/index.js",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -25,9 +27,16 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "gh-pages": "^4.0.0",
     "sass": "^1.54.4",
     "sass-loader": "^10.1.0",
     "vue-template-compiler": "^2.6.11"
+  },
+  "author": "snow_sunset",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheSunset/vue-segmented"
   },
   "eslintConfig": {
     "root": true,

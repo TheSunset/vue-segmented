@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <Segmented :options="options" />
-    Hello
   </div>
 </template>
 
