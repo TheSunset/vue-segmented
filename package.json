@@ -1,6 +1,6 @@
 {
   "name": "vue-segmented",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "基于vue的分段控制组件",
   "private": false,
   "main": "./dist/segmented.umd.js",
